@@ -31,15 +31,16 @@ Returns triple their absolute difference if
 the specified
 number is greater than 19.
 */
-let num= 19;
-let givenNumber= 40;
-const crazyDiff=(givenNumber, num)=>{
-    const difference = givenNumber -num;
+
+const crazyDiff=(givenNumber)=>{
+    const difference = Math.abs(givenNumber -19);
     if(givenNumber>19){
         return difference * 3;
+    }else{
+        console.log("less than 19")
     }
 }
-console.log(crazyDiff(givenNumber, num));
+console.log(crazyDiff(43));
 
 /* EXERCISE 4
 Write a function "boundary" which accept an integer N and returns true if N is within 20 and 100 (included) or equal to 400.
@@ -101,6 +102,8 @@ const reverseString=(givenString)=>{
     return givenString.split("").reverse().join("");
 }
 console.log(reverseString("hello"));
+
+
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
 */
