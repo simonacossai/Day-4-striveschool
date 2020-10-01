@@ -86,13 +86,22 @@ console.log(check3and7(35));
 Write a function "reverseString" to reverse programmatically a given string (es.: Strive => evirtS).
 */
 /* WRITE YOUR CODE HERE */
-
-
+const reverseString=(givenString)=>{
+    return givenString.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
 */
-
 /* WRITE YOUR CODE HERE */
+const upperFirst=(parameterString)=>{
+    let splitString = parameterString.toLowerCase().split(' ');
+    for (let i = 0; i < splitString.length; i++) {
+        splitString[i] = splitString[i].charAt(0).toUpperCase() + splitString[i].substring(1);     
+    }
+        return splitString.join(' '); 
+}
+console.log(upperFirst("i am capitalizing the first letters of this sentence"));
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
