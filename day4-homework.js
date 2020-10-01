@@ -104,10 +104,15 @@ const upperFirst=(parameterString)=>{
 console.log(upperFirst("i am capitalizing the first letters of this sentence"));
 
 /* EXERCISE 9
-Write a function "cutString" to create a new string without the first and last character of a given string.
-*/
-
+Write a function "cutString" to create a new string without the first and last character of a given string.*/
 /* WRITE YOUR CODE HERE */
+const cutString=(givenWord)=>{
+    let splitWord= givenWord.split("");
+    splitWord.pop();
+    splitWord.shift();
+    return splitWord
+}
+console.log(cutString("Array"));
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10
